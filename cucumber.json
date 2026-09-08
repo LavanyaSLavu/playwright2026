@@ -1,0 +1,21 @@
+{
+  "default": {
+    "tags":"@pom",
+    "dryRun": false,
+    "formatOptions": {
+      "snippetInterface": "async-await"
+    },
+    "paths": ["PlaywrightAutomationCode/FeatureFiles/**/*.feature"],
+    "require": [
+      "PlaywrightAutomationCode/StepDefinition/**/*.ts",
+      "PlaywrightAutomationCode/StepDefinition/**/*.js"
+    ],
+    "requireModule": ["ts-node/register/type-check"],
+    "format": [
+      "summary",
+      "html:test-result/cucumber-report.html",
+      "json:test-result/cucumber-report.json",
+      "rerun:@rerun.txt"
+    ]
+  }
+}

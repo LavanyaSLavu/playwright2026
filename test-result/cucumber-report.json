@@ -1,0 +1,94 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "verify-login-functionality;verify-login",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Verify login",
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 1245438599
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "User launches chrome browser",
+            "match": {
+              "location": "PlaywrightAutomationCode\\StepDefinition\\pom.ts:15"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 3636588299
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "User navigates to the lambatest playground page",
+            "match": {
+              "location": "PlaywrightAutomationCode\\StepDefinition\\pom.ts:29"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 193164600
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "User enter the email",
+            "match": {
+              "location": "PlaywrightAutomationCode\\StepDefinition\\pom.ts:34"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 50541000
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "User enter the password",
+            "match": {
+              "location": "PlaywrightAutomationCode\\StepDefinition\\pom.ts:39"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 1045010800
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "User click the login",
+            "match": {
+              "location": "PlaywrightAutomationCode\\StepDefinition\\pom.ts:44"
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@pom",
+            "line": 2
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "verify-login-functionality",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Verify login functionality",
+    "tags": [],
+    "uri": "PlaywrightAutomationCode\\FeatureFiles\\pom.feature"
+  }
+]
