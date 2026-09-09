@@ -12,7 +12,7 @@ let context: BrowserContext; //undefined
 let page: Page; //undefined->chromium page
 
 
-Given('User launches the  chrome browser', async function () {
+Given('User launches the chrome browser', async function () {
   // Write code here that turns the phrase above into concrete actions
   browser = await chromium.launch({
       headless: false,

@@ -2,7 +2,7 @@ Feature: Verify registeration function in ecommerce website
     @lambatestRegister
     Scenario: Validate registeration in lambdatest playground
 
-        Given User launches the  chrome browser
+        Given User launches the chrome browser
         When User navigates to lambatest playground page
         Then  User click the Continue button
         And User enters the first name

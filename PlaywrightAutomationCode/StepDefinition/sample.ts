@@ -12,7 +12,7 @@ let context: BrowserContext; //undefined
 let page: Page; //undefined->chromium page
 
 
-Given("I launch the chrome browser", async function () {
+Given("I launch the chrome browsers", async function () {
   // Write code
   browser = await chromium.launch({
     headless: false,

@@ -5,7 +5,7 @@ import { Browser, BrowserContext, chromium, Page } from "playwright";
 setDefaultTimeout(50 * 1000);//default
 let browser: Browser, context: BrowserContext, page: Page;
 
-Given('I launch browser', async function () {
+Given('I launch the chrome browser', async function () {
   browser = await chromium.launch({
     headless: false,
     args: ['--start-maximized']
@@ -49,13 +49,29 @@ Then("I handle Nested frame", async () => {
 
 When('I handle single iframe', async function () {
   await page.goto("https://demo.automationtesting.in/Frames.html");
-
-
-
+    
+  let availableFrames = await page.frames();
+  console.log("FramesCount: ", availableFrames.length);
+  console.error("====frames count====", availableFrames.length); 
+  let frame3= await page.frame({url : "https://demo.automationtesting.in/SingleFrame.html"});
+  //let frame = await page.frameLocator("#singleframe");
+  await frame3?.locator("//input[@type='text']").fill("Single Frame");
   
 });
 
 Then('I handle Nested iframe', async function () {
+  await page.getByText("Iframe with in an Iframe").click();
+  //let nestedFrame = await page.frame({url: "https://demo.automationtesting.in/MultipleFrames.html"})
+  //await nestedFrame?.locator("//input[@type='text']").fill("Nested Frame");
 
+    const input = page
+    .frameLocator('iframe')
+    .frameLocator('iframe')
+    .locator('input[type="text"]');
+
+  await input.fill('Hello');
+
+  //let childFrames =await nestedFrame?.childFrames();
+  //console.log("ChildFramesCount: ", childFrames?.length);
 });
 
