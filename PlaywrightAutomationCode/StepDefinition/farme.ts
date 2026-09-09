@@ -60,18 +60,39 @@ When('I handle single iframe', async function () {
 });
 
 Then('I handle Nested iframe', async function () {
-  await page.getByText("Iframe with in an Iframe").click();
-  //let nestedFrame = await page.frame({url: "https://demo.automationtesting.in/MultipleFrames.html"})
-  //await nestedFrame?.locator("//input[@type='text']").fill("Nested Frame");
 
-    const input = page
-    .frameLocator('iframe')
-    .frameLocator('iframe')
-    .locator('input[type="text"]');
+    await page.getByText("Iframe with in an Iframe").click();
 
-  await input.fill('Hello');
+    // 1. Get the outer iframe as a Frame
+    const outerFrame = page.frames().find(
+        frame => frame.url().includes("MultipleFrames.html")
+    );
 
-  //let childFrames =await nestedFrame?.childFrames();
-  //console.log("ChildFramesCount: ", childFrames?.length);
+    if (!outerFrame) {
+        throw new Error("Outer frame not found");
+    }
+
+    console.log("Outer Frame URL:", outerFrame.url());
+
+    // 2. Get child frames of the outer frame
+    const childFrames = outerFrame.childFrames();
+
+    // 3. Count child frames
+    console.log("ChildFramesCount:", childFrames.length);
+
+    // 4. Make sure a nested frame exists
+    if (childFrames.length === 0) {
+        throw new Error("Nested/child frame not found");
+    }
+
+    // 5. Get the nested frame
+    const innerFrame = childFrames[0];
+
+    console.log("Inner Frame URL:", innerFrame.url());
+
+    // 6. Fill the input inside the nested frame
+    await innerFrame
+        .locator('input[type="text"]')
+        .fill("Nested Frame");
 });
 
