@@ -1,0 +1,11 @@
+{
+  "url": "https://ecommerce-playground.lambdatest.io/index.php?route=account/login",
+  "User1": {
+    "email": "lavanyasbeece16@gmail.com",
+    "pwd": "Lavu@123"
+  },
+  "User2": {
+     "email": "lavanyasbeece16@gmail.com",
+     "pwd": "Lavu@123"
+  }
+}

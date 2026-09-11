@@ -1,6 +1,6 @@
-import { Before } from "@cucumber/cucumber";
+import { After, Before } from "@cucumber/cucumber";
 import { Browser, BrowserContext, chromium } from "playwright";
-import {pageFixture} from "../Utils/pageFixture";
+import { pageFixture } from "../Utils/pageFixture";
 
 
 let browser: Browser; //undefined
@@ -20,3 +20,8 @@ Before(async function () {
     pageFixture.page = await context.newPage();
    
 })
+ After(async () => {
+ // await pageFixture.page.close();
+  //await context.close();
+  await browser.close();
+});

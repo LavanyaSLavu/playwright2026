@@ -4,65 +4,53 @@
     "elements": [
       {
         "description": "",
-        "id": "verify-frames-in-playwright;validate-practiceframes-in-playwright",
+        "id": "verify-drag-and-drop-functionality;verify-drag-and-drop",
         "keyword": "Scenario",
-        "line": 9,
-        "name": "validate practiceframes in playwright",
+        "line": 4,
+        "name": "Verify drag and drop",
         "steps": [
           {
             "result": {
               "status": "passed",
-              "duration": 2791712599
+              "duration": 1211712800
             },
             "arguments": [],
             "keyword": "Given ",
-            "line": 10,
-            "name": "I launch the chrome browser",
+            "line": 5,
+            "name": "I launch the broswer",
             "match": {
-              "location": "PlaywrightAutomationCode\\StepDefinition\\farme.ts:8"
+              "location": "PlaywrightAutomationCode\\StepDefinition\\dragAndDrop.ts:8"
             }
           },
           {
             "result": {
-              "status": "passed",
-              "duration": 2160784099
-            },
-            "arguments": [],
-            "keyword": "When ",
-            "line": 11,
-            "name": "I handle single iframe",
-            "match": {
-              "location": "PlaywrightAutomationCode\\StepDefinition\\farme.ts:50"
-            }
-          },
-          {
-            "result": {
-              "status": "passed",
-              "duration": 173094300
+              "status": "failed",
+              "duration": 11448234700,
+              "error_message": "locator.hover: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//iframe[@src=\\'../../demoSite/practice/droppable/accepted-elements.html\\']').contentFrame().locator('#droppable')\u001b[22m\n\u001b[2m    - locator resolved to <div id=\"droppable\" class=\"ui-widget-header ui-droppable\">…</div>\u001b[22m\n\u001b[2m  - attempting hover action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and stable\u001b[22m\n\u001b[2m      - element is visible and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <p>I'm draggable but can't be dropped</p> from <div id=\"draggable-nonvalid\" class=\"ui-widget-content ui-draggable ui-draggable-handle\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying hover action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and stable\u001b[22m\n\u001b[2m      - element is visible and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <p>I'm draggable but can't be dropped</p> from <div id=\"draggable-nonvalid\" class=\"ui-widget-content ui-draggable ui-draggable-handle\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying hover action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    9 × waiting for element to be visible and stable\u001b[22m\n\u001b[2m      - element is visible and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <p>I'm draggable but can't be dropped</p> from <div id=\"draggable-nonvalid\" class=\"ui-widget-content ui-draggable ui-draggable-handle\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying hover action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n\n    at World.<anonymous> (C:\\Users\\Admin\\Documents\\Lavanya_Study_Materials\\Playwright Automation\\Playwright\\PlaywrightAutomationCode\\StepDefinition\\dragAndDrop.ts:89:14)"
             },
             "arguments": [],
             "keyword": "Then ",
-            "line": 12,
-            "name": "I handle Nested iframe",
+            "line": 8,
+            "name": "I handle dragDrop via mouse hover in practice website",
             "match": {
-              "location": "PlaywrightAutomationCode\\StepDefinition\\farme.ts:62"
+              "location": "PlaywrightAutomationCode\\StepDefinition\\dragAndDrop.ts:47"
             }
           }
         ],
         "tags": [
           {
-            "name": "@practiceframes",
-            "line": 8
+            "name": "@mouseDragdrp",
+            "line": 3
           }
         ],
         "type": "scenario"
       }
     ],
-    "id": "verify-frames-in-playwright",
+    "id": "verify-drag-and-drop-functionality",
     "line": 1,
     "keyword": "Feature",
-    "name": "Verify frames in playwright",
+    "name": "Verify drag and drop functionality",
     "tags": [],
-    "uri": "PlaywrightAutomationCode\\FeatureFiles\\frame.feature"
+    "uri": "PlaywrightAutomationCode\\FeatureFiles\\draganddrop.feature"
   }
 ]

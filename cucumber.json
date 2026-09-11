@@ -1,6 +1,6 @@
 {
   "default": {
-    "tags":"@practiceframes",
+    "tags":"@mouseDragdrp",
     "dryRun": false,
     "formatOptions": {
       "snippetInterface": "async-await"
