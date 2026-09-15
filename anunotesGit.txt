@@ -1,0 +1,20 @@
+git clone <remote repro link>
+npm install
+npx playwright install
+
+
+git remote -v    
+origin  https://github.com/LavanyaSLavu/playwright2026.git (fetch)
+origin  https://github.com/LavanyaSLavu/playwright2026.git (push)
+
+git status
+echo "Anu notes added into the project" > anunotesGit.txt // not important its only create terminal command
+git add anunotesGit.txt
+git commit -m "Anu notes added into the project"
+before push any code we need to sync with remote repo:
+git pull origin main
+
+set remote repo using below command:
+git remote set-url origin https://github.com/LavanyaSLavu/playwright2026.git/
+
+git push -u origin main
