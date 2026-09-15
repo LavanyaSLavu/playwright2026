@@ -13,3 +13,8 @@ git add anunotesGit.txt
 git commit -m "Anu notes added into the project"
 before push any code we need to sync with remote repo:
 git pull origin main
+
+set remote repo using below command:
+git remote set-url origin https://github.com/LavanyaSLavu/playwright2026.git/
+
+git push -u origin main

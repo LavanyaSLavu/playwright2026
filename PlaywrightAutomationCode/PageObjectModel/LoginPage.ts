@@ -13,7 +13,7 @@ export default class LoginPage{
     
     //url launch, enter username, enter password , click login
     async launchUrl(url: string){
-        await pageFixture.page.goto(url);
+       await pageFixture.page.goto(url);
     }
     async userName(userName: string){
         await pageFixture.page.locator(this.loginElements.email).fill(userName);

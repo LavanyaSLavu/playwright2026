@@ -2,6 +2,7 @@ import { Given, Then, When } from "@cucumber/cucumber";
 import { Browser, BrowserContext, chromium, firefox, Page } from "playwright";
 import {pageFixture} from "../Utils/pageFixture";
 import LoginPage from "../PageObjectModel/LoginPage";
+import eCom from "../TestData/eCom.json";
 
 //Create objct for class files which you are going to use in this step definition logic
 let lp = new LoginPage();
@@ -34,22 +35,23 @@ let lp = new LoginPage();
 When('User navigates to the lambatest playground page', async function () {
   // Write code here that turns the phrase above into concrete actions
   // await pageFixture.page.goto("https://ecommerce-playground.lambdatest.io/index.php?route=account/login");
-  await lp.launchUrl("https://ecommerce-playground.lambdatest.io/index.php?route=account/login");
+  await lp.launchUrl(eCom.url);
 });
 Then('User enter the email', async function () {
   // Write code here that turns the phrase above into concrete actions
    //await pageFixture.page.locator("//input[@id='input-email']").fill("lavanyasbeece16@gmail.com");
-  await lp.userName("lavanyasbeece16@gmail.com");
+  await lp.userName(eCom.User1.email);
 });
 Then('User enter the password', async function () {
   // Write code here that turns the phrase above into concrete actions
    //await pageFixture.page.locator("//input[@id='input-password']").pressSequentially("Lavu@123");
-  await lp.pass("Lavu@123");
+  await lp.pass(eCom.User1.pwd);
 });
 Then('User click the login', async function () {
   // Write code here that turns the phrase above into concrete actions
   //await pageFixture.page.locator("//input[@class='btn btn-primary']").click();
   await lp.clickLogin();
+
 });
 
 
