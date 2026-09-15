@@ -19,7 +19,7 @@ Given("I launch chrome browser", async function () {
 
   page = await context.newPage();
 
-  //   page = await browser.newPage();
+  //  page = await browser.newPage();
 });
 
 //30sec
